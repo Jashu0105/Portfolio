@@ -1,4 +1,4 @@
-# Hi ðŸ‘‹, I'm Jaswanth Doddi
+# Hi , I'm Jaswanth Doddi
 
 ### A budding Javascript developer
 
