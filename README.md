@@ -1,5 +1,3 @@
-# Portfolio
-
 # Hi 👋, I'm Jaswanth Doddi
 
 ### A budding Javascript developer
@@ -26,3 +24,4 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=Jashu0105&show_icons=true&locale=en" alt="Jashu0105" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=Jashu0105&" alt="Jashu0105" /></p>
+
