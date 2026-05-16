@@ -1,246 +1,196 @@
-:root{
-  --bg:#07111f;
-  --bg2:#0c1b2e;
-  --card:rgba(255,255,255,.08);
-  --text:#e8f0ff;
-  --muted:#a9b7d0;
-  --accent:#4fd1ff;
-  --accent2:#7c5cff;
-  --border:rgba(255,255,255,.14);
-  --shadow:0 20px 50px rgba(0,0,0,.35);
-  --radius:22px;
-  --max:1180px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Doddi Jaswanth</title>
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(circle at top left, rgba(79,209,255,.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(124,92,255,.20), transparent 28%),
-    linear-gradient(180deg,var(--bg),var(--bg2));
-  min-height:100vh;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-.container{width:min(100% - 32px,var(--max));margin:0 auto}
-.glass{
-  background:var(--card);
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-}
-.nav{
-  position:sticky;top:0;z-index:1000;
-  margin:18px auto 0;
-  border-radius:999px;
-  padding:14px 18px;
-}
-.nav-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:800;
-}
-.brand-badge{
-  width:42px;height:42px;border-radius:14px;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#04111f;font-weight:900;
-}
-.nav-links{
-  display:flex;gap:18px;flex-wrap:wrap;justify-content:center;
-}
-.nav-links a{
-  color:var(--muted);
-  padding:8px 12px;
-  border-radius:999px;
-  transition:.25s ease;
-}
-.nav-links a:hover,.nav-links a.active{
-  color:var(--text);
-  background:rgba(255,255,255,.08);
-}
-.hero{padding:92px 0 56px}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:28px;
-  align-items:center;
-}
-.hero h1{
-  font-size:clamp(2.4rem,6vw,4.8rem);
-  line-height:1.02;
-  margin:0 0 14px;
-  letter-spacing:-1px;
-}
-.gradient{
-  background:linear-gradient(90deg,var(--accent),#9be7ff,var(--accent2));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.hero p{
-  color:var(--muted);
-  font-size:1.06rem;
-  line-height:1.8;
-  max-width:62ch;
-  margin:0 0 28px;
-}
-.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 28px}
-.pill{
-  padding:10px 14px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  background:rgba(255,255,255,.05);
-}
-.actions{display:flex;gap:14px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:14px 20px;
-  border-radius:14px;
-  font-weight:700;
-  transition:.25s ease;
-  border:1px solid transparent;
-}
-.btn-primary{
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#07111f;
-  box-shadow:0 14px 36px rgba(79,209,255,.25);
-}
-.btn-secondary{
-  background:rgba(255,255,255,.05);
-  border-color:var(--border);
-  color:var(--text);
-}
-.btn:hover{transform:translateY(-2px)}
-.profile-box{
-  padding:24px;
-  border-radius:24px;
-  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-.avatar{
-  width:96px;height:96px;border-radius:28px;
-  display:grid;place-items:center;font-size:2rem;
-  font-weight:900;margin-bottom:16px;
-  background:linear-gradient(135deg,rgba(79,209,255,.25),rgba(124,92,255,.25));
-  border:1px solid rgba(255,255,255,.16);
-}
-.stats{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  margin-top:18px;
-}
-.stat{
-  padding:14px;
-  border-radius:18px;
-  background:rgba(255,255,255,.06);
-  border:1px solid var(--border);
-}
-.stat strong{display:block;font-size:1.2rem;margin-bottom:4px}
-section{padding:22px 0 0}
-.section-title{font-size:1.7rem;margin:0 0 18px;letter-spacing:-.4px}
-.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.card{
-  padding:22px;
-  border-radius:var(--radius);
-  background:var(--card);
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-  transition:transform .25s ease,border-color .25s ease;
-}
-.card:hover{transform:translateY(-4px);border-color:rgba(79,209,255,.35)}
-.card h3{margin:0 0 10px;font-size:1.15rem}
-.card p,.card li{color:var(--muted);line-height:1.75}
-.list{padding-left:18px;margin:0}
-.tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-.tag{
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  border:1px solid var(--border);
-  font-size:.9rem;
-}
-.timeline{display:grid;gap:14px}
-.timeline-item{
-  padding:18px 20px;
-  border-radius:18px;
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--border);
-}
-.timeline-item small{
-  color:var(--accent);
-  display:block;
-  margin-bottom:6px;
-  font-weight:700;
-}
-.contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:22px}
-.contact-links{display:grid;gap:12px}
-.contact-link{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:14px;
-  padding:14px 16px;
-  border-radius:16px;
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--border);
-  transition:.25s ease;
-}
-.contact-link:hover{transform:translateX(4px);border-color:rgba(79,209,255,.35)}
-.footer{
-  padding:36px 0 50px;
-  color:var(--muted);
-  text-align:center;
-  font-size:.95rem;
-}
-.fade-in{
-  opacity:0;
-  transform:translateY(22px);
-  transition:opacity .7s ease, transform .7s ease;
-}
-.fade-in.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-.menu-btn{
-  display:none;
-  background:transparent;
-  border:1px solid var(--border);
-  color:var(--text);
-  padding:10px 12px;
-  border-radius:12px;
-}
-@media (max-width:960px){
-  .hero-grid,.grid-2,.grid-3,.contact-grid{grid-template-columns:1fr}
-  .nav-inner{flex-direction:column}
-  .nav{border-radius:24px}
-}
-@media (max-width:640px){
-  .hero{padding-top:54px}
-  .hero h1{font-size:2.35rem}
-  .card,.profile-box{padding:18px}
-  .stats{grid-template-columns:1fr}
-  .actions{flex-direction:column}
-  .btn{width:100%}
-  .menu-btn{display:inline-flex}
-  .nav-links{display:none;width:100%}
-  .nav-links.open{display:flex;flex-direction:column;gap:8px}
-}
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="container nav glass">
+    <div class="nav-inner">
+
+      <div class="brand">
+        <div class="brand-badge">J</div>
+
+        <div>
+          <div>Doddi Jaswanth</div>
+          <small style="color: var(--muted);">
+            Frontend / Full Stack Developer
+          </small>
+        </div>
+      </div>
+
+      <button class="menu-btn">☰</button>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <main class="container">
+
+    <section class="hero fade-in">
+
+      <div class="hero-grid">
+
+        <div>
+
+          <h1>
+            About
+            <span class="gradient">Me</span>
+          </h1>
+
+          <p>
+            Hello! My name is Doddi Jaswanth and I am currently pursuing
+            B.Tech in Computer Science and Machine Learning at
+            CMR Technical Campus.
+          </p>
+
+          <p>
+            I am passionate about frontend and full stack development.
+            I enjoy building responsive websites and learning modern web technologies.
+          </p>
+
+          <p>
+            My technical skills include HTML, CSS, JavaScript,
+            Java, Python, Node.js, SQL, and C programming.
+          </p>
+
+          <p>
+            Apart from technology, I am also an NCC cadet.
+            I completed my NCC B Certificate and currently pursuing
+            the NCC C Certificate, which improved my leadership,
+            discipline, and teamwork skills.
+          </p>
+
+          <div class="actions">
+
+            <a
+              href="projects.html"
+              class="btn btn-primary"
+            >
+              View Projects
+            </a>
+
+            <a
+              href="contact.html"
+              class="btn btn-secondary"
+            >
+              Contact Me
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="profile-box">
+
+          <div class="avatar">
+            DJ
+          </div>
+
+          <h3>
+            Quick Info
+          </h3>
+
+          <div class="stats">
+
+            <div class="stat">
+              <strong>7.33</strong>
+              <span>CGPA</span>
+            </div>
+
+            <div class="stat">
+              <strong>2nd Year</strong>
+              <span>B.Tech CSM</span>
+            </div>
+
+            <div class="stat">
+              <strong>NCC B</strong>
+              <span>Certificate</span>
+            </div>
+
+            <div class="stat">
+              <strong>Frontend</strong>
+              <span>Developer</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="fade-in">
+
+      <h2 class="section-title">
+        Education
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <small>2022</small>
+
+          <strong>
+            SSC — Prathibha Vidyalayam
+          </strong>
+
+          <div style="color: var(--muted); margin-top: 6px;">
+            AP SSC Board | 76%
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <small>2024</small>
+
+          <strong>
+            Intermediate — SR Education Academy
+          </strong>
+
+          <div style="color: var(--muted); margin-top: 6px;">
+            MPC | 70.4%
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <small>Present</small>
+
+          <strong>
+            B.Tech — CMR Technical Campus
+          </strong>
+
+          <div style="color: var(--muted); margin-top: 6px;">
+            Computer Science and Machine Learning
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    Made with HTML, CSS & JavaScript · Doddi Jaswanth
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
